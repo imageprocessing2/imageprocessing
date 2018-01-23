@@ -1,0 +1,7 @@
+ delimiter //
+mysql> create procedure proc_update(IN fI int,IN fnaM varchar(20),IN VILLage varchar(20),IN aGE int,IN Contnumb bigint)
+    -> begin
+    -> update farmer_profiles set f_id=fI,f_name=fnaM,village=VILLage,age=aGE,contact_number=Contnumb;
+    -> end //
+ delimiter ;
+mysql> call proc_update(107,'khan','udyavar',65,9978675678);
